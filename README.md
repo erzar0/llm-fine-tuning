@@ -18,7 +18,7 @@ To finetune a pre-trained Large Language Model to accurately translate natural l
 
 **Student 1: Data Management & Preprocessing**
 
-* Understand Text-to-SQL task, datasets (e.g., [synthetic_text_to_sql](https://huggingface.co/datasets/gretelai/synthetic_text_to_sql), and evaluation metrics.
+* Understand Text-to-SQL task, datasets (e.g. [synthetic_text_to_sql](https://huggingface.co/datasets/gretelai/synthetic_text_to_sql)), and evaluation metrics.
 * Load, explore, and preprocess the chosen dataset (schema linking, formatting).
 * Split data into train, validation, and test sets.
 * Contribute data-related sections to the final report.
