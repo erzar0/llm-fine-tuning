@@ -2,3 +2,8 @@
 my-venv/
 __pycache__/
 *.pyc
+LLaMA-Factory/
+LLaMA-Factory/*
+.idea/
+data/dataset_train.json
+.env
