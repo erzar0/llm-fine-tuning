@@ -38,3 +38,6 @@ To finetune a pre-trained Large Language Model to accurately translate natural l
 * Evaluate the finetuned model on the test set.
 * Perform error analysis on generated SQL queries.
 * Contribute evaluation and results sections to the report and prepare the presentation.
+
+
+
