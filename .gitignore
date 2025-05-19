@@ -7,3 +7,8 @@ LLaMA-Factory/*
 .idea/
 data/dataset_train.json
 .env
+LLaMA-Factory/*
+.venv/
+out/
+models/
+wandb/

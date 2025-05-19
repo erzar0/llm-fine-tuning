@@ -1,0 +1,10 @@
+model_name_or_path: Qwen/Qwen3-0.6B
+adapter_name_or_path: out/checkpoint-400 # set your lora model path here
+template: qwen3
+trust_remote_code: true
+
+### export
+export_dir: models/qwen3_lora_sft
+export_size: 5
+export_device: auto
+export_legacy_format: false
