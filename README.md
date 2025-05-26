@@ -18,7 +18,6 @@ To finetune a pre-trained Large Language Model to accurately translate natural l
 
 .
 ├── data/                          # Directory containing JSON data files
-
 │   ├── dataset_info.json          # File used to generate data for training
 
 │   └── dataset_train.json         # Data file generated using dataset_info.json
