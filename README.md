@@ -16,6 +16,7 @@ To finetune a pre-trained Large Language Model to accurately translate natural l
 
 ## Project structure
 
+```
 .
 
 ├── data/                          # Directory containing JSON data files
@@ -45,7 +46,7 @@ To finetune a pre-trained Large Language Model to accurately translate natural l
 ├── Qwen.ipynb                     # Notebook for training the Qwen pretrained model
 
 └── T5-Large.ipynb                 # Notebook for training the T5-Large pretrained model
-
+```
 
 **Responsibility**
 
