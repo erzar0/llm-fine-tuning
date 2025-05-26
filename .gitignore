@@ -6,6 +6,7 @@ LLaMA-Factory/
 LLaMA-Factory/*
 .idea/
 data/dataset_train.json
+data/dataset_test.json
 .env
 LLaMA-Factory/*
 .venv/

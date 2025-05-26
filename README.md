@@ -46,3 +46,7 @@ To finetune a pre-trained Large Language Model to accurately translate natural l
 - Analyze final training and validation metrics in W&B to visualize model performance.
 - Write a short report summarizing results, challenges, and next steps.
 - Present the project and gather feedback for potential improvements.
+
+## Notes
+
+- https://yale-lily.github.io/spider

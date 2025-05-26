@@ -39,19 +39,39 @@ def create_sharegpt_format(dataframe: pd.DataFrame):
         return '\n'.join(trimmed)
 
     sharegpt_data = []
+
     for _, row in dataframe.iterrows():
-        system_prompt = _trim("""You are a helpful assistant specialized in generating SQL queries.
-                                Generate an SQL query that correctly answers the user's question based on the provided database schema and context.""")
+        system_prompt = _trim("""
+            /nothink
+            You are a highly precise SQL generation engine.
+            Your sole task is to translate natural language questions into correct, executable SQL queries.
+            You must only rely on the provided database schema and context.
+            Do not explain or comment.
+            Do not include anything except a valid SQL query enclosed in <sql>...</sql> tags.
+            Ensure the SQL query is syntactically correct and executable.
+            You are only allowed to use the generic SQL syntax, no specific dialects.
+            """)
 
         conversations = [
             {
                 "from": "user",
-                "value": _trim(f"""Context:\n'{row["sql_context"]}'
-                                    Question:\n'{row["sql_prompt"]}'""")
+                "value": _trim(f"""You are provided with the following database schema and context:
+
+                    --- SCHEMA START ---
+                    {row["sql_context"]}
+                    --- SCHEMA END ---
+
+                    Using only this information, write an SQL query that answers the following question:
+
+                    "{row["sql_prompt"]}"
+
+                    Output only the SQL query, with no additional text.
+                    Wrap your final query inside <sql> and </sql> tags.
+                    """)
             },
             {
                 "from": "assistant",
-                "value": f"Result: '{row['sql']}'"
+                "value": f"<sql>\n{row['sql'].strip()}\n</sql>"
             }
         ]
 
@@ -60,6 +80,7 @@ def create_sharegpt_format(dataframe: pd.DataFrame):
             "system": system_prompt,
             "tools": ""
         }
+
         sharegpt_data.append(sharegpt_item)
 
     return sharegpt_data
