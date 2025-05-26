@@ -51,7 +51,7 @@ def create_sharegpt_format(dataframe: pd.DataFrame):
             },
             {
                 "from": "assistant",
-                "value": f"Result: '{row["sql"]}'"
+                "value": f"Result: '{row['sql']}'"
             }
         ]
 
@@ -63,3 +63,4 @@ def create_sharegpt_format(dataframe: pd.DataFrame):
         sharegpt_data.append(sharegpt_item)
 
     return sharegpt_data
+

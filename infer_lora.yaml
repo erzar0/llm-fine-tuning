@@ -1,0 +1,5 @@
+model_name_or_path: Qwen/Qwen3-0.6B
+adapter_name_or_path: out/checkpoint-400 #models/qwen3_lora_sft
+template: qwen3
+infer_backend: huggingface # choices: [huggingface, vllm, sglang]
+trust_remote_code: true
