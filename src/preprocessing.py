@@ -42,6 +42,7 @@ def create_sharegpt_format(dataframe: pd.DataFrame):
 
     for _, row in dataframe.iterrows():
         system_prompt = _trim("""
+            /nothink
             You are a highly precise SQL generation engine.
             Your sole task is to translate natural language questions into correct, executable SQL queries.
             You must only rely on the provided database schema and context.
