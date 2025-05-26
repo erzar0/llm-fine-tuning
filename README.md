@@ -36,7 +36,7 @@ To finetune a pre-trained Large Language Model to accurately translate natural l
 
 ## Project setup
 
-Create environment:
+Create and activate environment:
 ```bash
 ./setup-python-env.sh
 ```
