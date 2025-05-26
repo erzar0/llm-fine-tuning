@@ -34,6 +34,13 @@ To finetune a pre-trained Large Language Model to accurately translate natural l
 └── T5-Large.ipynb                 # Notebook for training the T5-Large pretrained model
 ```
 
+## Project setup
+
+Create environment:
+```bash
+./setup-python-env.sh
+```
+
 **Responsibility**
 
 **Week 1: 13.05-20.05**
