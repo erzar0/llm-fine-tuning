@@ -25,7 +25,7 @@ To finetune a pre-trained Large Language Model to accurately translate natural l
 ├── LLaMA-Factory/                 # Framework for easy and convenient model training using JSON configuration files
 ├── llama-factory-configs/         # Configuration files for LLaMA-Factory
 ├── README.md                      # Main file documenting the project
-├── requirements/                 
+├── requirements/
 │   └── requirements.txt           # Python dependencies
 ├── setup-python-env.sh            # Script to set up the project environment
 ├── src/                           # Utilities for data preprocessing and validation
@@ -37,6 +37,7 @@ To finetune a pre-trained Large Language Model to accurately translate natural l
 ## Project setup
 
 Create and activate environment:
+
 ```bash
 ./setup-python-env.sh
 ```
