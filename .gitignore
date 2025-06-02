@@ -13,3 +13,4 @@ LLaMA-Factory/*
 out/
 models/
 wandb/
+venv/
