@@ -6,6 +6,8 @@ def extract_sql(text):
     import re
     pattern = r"<sql>(.*?)</sql>"
     match = re.search(pattern, text, re.DOTALL)
+    if match is None:
+        return ""
     return match.group(1)
     
 def chdiff(str1, str2):
