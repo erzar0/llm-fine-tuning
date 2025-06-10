@@ -86,3 +86,15 @@ def create_sharegpt_format(dataframe: pd.DataFrame):
 
     return sharegpt_data
 
+
+def create_t5_format(df):
+    t5_data = []
+    for _, row in df.iterrows():
+        input_text = (
+            f"Translate to SQL:\n"
+            f"Context:\n{row['sql_context']}\n\n"
+            f"Question:\n{row['sql_prompt']}"
+        )
+        output_text = row['sql']
+        t5_data.append({"input": input_text, "target": output_text})
+    return t5_data
