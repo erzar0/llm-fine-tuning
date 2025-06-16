@@ -22,16 +22,17 @@ To finetune a pre-trained Large Language Model to accurately translate natural l
 │   ├── dataset_info.json          # File used to generate data for training
 │   └── dataset_train.json         # Data file generated using dataset_info.json
 ├── docs/                          # Directory containing documentation files
+├── generated-files                # Directory containing generated json files with model fine-tuning parameters
 ├── LLaMA-Factory/                 # Framework for easy and convenient model training using JSON configuration files
 ├── llama-factory-configs/         # Configuration files for LLaMA-Factory
 ├── README.md                      # Main file documenting the project
 ├── requirements/
 │   └── requirements.txt           # Python dependencies
+├── evaluate.ipynb                 # Notebook with evaluation 
 ├── setup-python-env.sh            # Script to set up the project environment
 ├── src/                           # Utilities for data preprocessing and validation
-├── GPTNeoX.ipynb                  # Notebook for training the GPT-NeoX pretrained model
-├── Qwen.ipynb                     # Notebook for training the Qwen pretrained model
-└── T5-Large.ipynb                 # Notebook for training the T5-Large pretrained model
+├── LLaMA-Factory.ipynb            # Notebook for training the Qwen pretrained model
+└── T5-Small.ipynb                 # Notebook for training the T5-Small pretrained model
 ```
 
 ## Project setup
