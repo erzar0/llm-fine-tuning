@@ -4,9 +4,6 @@ import re
 BASE_MODEL_PATH = "Qwen/Qwen3-0.6B"
 DEFAULT_SYSTEM_PROMPT = (
     "You are a fair and strict SQL evaluator. "
-    "You only return a number between 0 and 10. "
-    "No reasoning. No explanation. Just the score."
-    "/no_think"
 )
 
 class SqlJudge():
@@ -29,9 +26,6 @@ class SqlJudge():
 
             Score the assistant's SQL query from 0 to 10 based on correctness, completeness, and formatting.
             0 means completely wrong, 10 means perfect.
-            Return ONLY AND A SINGLE NUMBER a number between 0 and 10.
-            YOU ARE NOT ALLOWED TO RETURN ANYTHING ELSE, JUST THE NUMBER.
-            /no_think
             """
     
     def score_response(self, reference_sql, predicted_sql):
@@ -42,7 +36,8 @@ class SqlJudge():
             response += chunk
 
         try:
-            number = re.search(r'\b\d+(\.\d+)?\b', response)
+            print(response)
+            number = re.search(r'\b\d+\b', response)
             if number:
                 score = float(number.group(0))
                 return min(max(score, 0), 10)
